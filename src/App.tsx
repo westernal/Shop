@@ -1,8 +1,7 @@
 import React from "react";
-import logo from "./logo.svg";
 
 function App() {
-  return <main></main>;
+  return <main className="">salam</main>;
 }
 
 export default App;
