@@ -30,7 +30,7 @@ const Card = ({ player }: { player: string }) => {
 
   return (
     <a href={playerInfo?.url}>
-      <article className="m-5 bg-violet-950 w-56 grid rounded p-3 place-items-center grid-cols-1">
+      <article className="m-5 bg-violet-950 grid rounded p-3 place-items-center grid-cols-1 w-64">
         <img
           src={playerInfo?.avatar}
           alt="Avatar"
