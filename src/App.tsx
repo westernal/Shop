@@ -1,13 +1,21 @@
 import React from "react";
-import CardList from "./components/Card/CardList";
+import ProductList from "./components/Product/ProductList";
 import Header from "./components/Header/header";
+import useSWR from "swr";
+import API from "./functions/API";
 
 function App() {
-  const players: string[] = ["dalpeh", "westernal"];
+  const { data: products = { data: [] } } = useSWR(
+    () => `products?limit=9`,
+    (url) => API(url)
+  );
+
+  console.log(products);
+
   return (
     <main>
       <Header />
-      <CardList players={players} />
+      <ProductList products={products?.data} />
     </main>
   );
 }

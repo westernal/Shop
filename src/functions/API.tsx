@@ -1,5 +1,5 @@
 export default async function API(url: string) {
-  const host = "https://api.chess.com/pub";
+  const host = "https://fakestoreapi.com/";
 
   const options = {
     method: "GET",

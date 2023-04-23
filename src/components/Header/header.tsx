@@ -1,7 +1,10 @@
+import ShoppingCart from "../Cart/ShoppingCart.";
+
 const Header = () => {
   return (
-    <header className="text-center p-5">
-      <h1 className="text-violet-800 text-3xl">Chess Stats</h1>
+    <header className="text-center justify-between items-center flex p-10">
+      <ShoppingCart />
+      <h1 className="text-violet-400 text-3xl">Fake Shop</h1>
     </header>
   );
 };
