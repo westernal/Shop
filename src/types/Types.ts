@@ -5,5 +5,8 @@ export type Product = {
     category: string,
     description: string,
     image: string
+}
 
+export type CartSlice = {
+    numOfItems: number
 }

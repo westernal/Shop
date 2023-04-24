@@ -1,9 +1,16 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store/store";
+
 const ShoppingCart = () => {
+  const numOfItems = useSelector((state: any) => state.numOfItems);
+
   return (
     <div className="shopping-cart relative h-12 w-12 grid place-items-center">
-      <div className="items-number w-5 h-5 text-sm bg-white rounded-full text-violet-800 absolute top-0 right-0">
-        <p>0</p>
-      </div>
+      {numOfItems ? (
+        <div className="items-number w-5 h-5 text-sm bg-white rounded-full text-violet-400 absolute top-0 right-0">
+          {numOfItems}
+        </div>
+      ) : null}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
