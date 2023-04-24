@@ -1,22 +1,18 @@
 import React from "react";
-import ProductList from "./components/Product/ProductList";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import Cart from "./pages/cart";
 import Header from "./components/Header/header";
-import useSWR from "swr";
-import API from "./functions/API";
 
 function App() {
-  const { data: products = { data: [] } } = useSWR(
-    () => `products?limit=9`,
-    (url) => API(url)
-  );
-
-  console.log(products);
-
   return (
-    <main>
+    <>
       <Header />
-      <ProductList products={products?.data} />
-    </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </>
   );
 }
 

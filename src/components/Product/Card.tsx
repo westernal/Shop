@@ -1,7 +1,6 @@
 import React from "react";
 import { Product } from "../../types/Types";
 import { useDispatch } from "react-redux";
-import { AppDispatch } from "../../redux/store/store";
 import { added } from "../../redux/slices/cart";
 
 const Card = ({ product }: { product: Product }) => {

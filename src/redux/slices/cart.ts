@@ -14,9 +14,12 @@ const cartSlice = createSlice({
         },
         removed: state => {
             state.numOfItems--
+        },
+        reset: state => {
+            state.numOfItems = 0
         }
     }
 })
 
 export default cartSlice.reducer
-export const {added, removed} = cartSlice.actions
+export const {added, removed, reset} = cartSlice.actions
